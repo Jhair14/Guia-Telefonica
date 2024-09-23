@@ -1,0 +1,44 @@
+<html><head>
+<title>Guia Telefonica </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Guía Telefónica</h1>
+    
+    <div>
+        <h2>Nueva Lista:</h2>
+        <input type="text" id="newListName" placeholder="Ingrese el nombre de la lista">
+        <button onclick="createList()">CREAR</button>
+    </div>
+
+    <div>
+        <h2>Añadir Contacto: </h2>
+        <input type="text" id="contactName" placeholder="Nombre">
+        <input type="tel" id="contactPhone" placeholder="Celular">
+        <input type="email" id="contactEmail" placeholder="Email">
+        <input type="text" id="contactNote" placeholder="Nota (opcional)">
+        <select id="contactList">
+            <option value="">Seleccionar una Lista</option>
+        </select>
+        <button onclick="addContact()">GUARDAR</button>
+    </div>
+
+    <div>
+        <h2>Buscar</h2>
+        <input type="text" id="searchBar" placeholder="Buscar por nombre, telefono, email..." oninput="searchContacts()">
+    </div>
+
+    <div id="lists"></div>
+
+    <div>
+        <h2>Añadir o Cargar Contactos</h2>
+        <button onclick="saveContacts()">Guardar Contactos</button>
+        <input type="file" id="loadFile" accept=".json">
+        <button onclick="loadContacts()">Cargar Contactos</button>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
